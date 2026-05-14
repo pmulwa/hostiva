@@ -1,0 +1,23 @@
+project_id = "ljynqsjazdkrwffksiap"
+
+[functions.process-stay-lifecycle]
+verify_jwt = false
+
+[functions.support-chat]
+verify_jwt = false
+
+[functions.confirm-booking-payment]
+verify_jwt = false
+
+[functions.translate-message]
+verify_jwt = false
+
+[functions.paystack-webhook]
+verify_jwt = false
+
+[functions.send-email-notification]
+verify_jwt = false
+
+[functions.send-sms-otp]
+verify_jwt = false
+

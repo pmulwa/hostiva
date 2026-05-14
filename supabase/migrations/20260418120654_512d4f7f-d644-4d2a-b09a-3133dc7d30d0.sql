@@ -1,0 +1,2 @@
+ALTER TABLE public.bookings DROP CONSTRAINT IF EXISTS bookings_refund_status_check;
+ALTER TABLE public.bookings ADD CONSTRAINT bookings_refund_status_check CHECK (refund_status = ANY (ARRAY['none','pending','processing','partial','full','completed','failed']));

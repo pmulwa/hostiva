@@ -1,0 +1,83 @@
+# ========================
+# Dependencies
+# ========================
+node_modules/
+.pnp
+.pnp.js
+
+# ========================
+# Environment Variables - NEVER COMMIT
+# ========================
+.env
+.env.local
+.env.development
+.env.production
+.env.staging
+.env*.local
+*.env
+
+# ========================
+# Build Output
+# ========================
+dist/
+dist-ssr/
+build/
+out/
+.output/
+
+# ========================
+# Supabase
+# ========================
+supabase/.temp/
+supabase/functions/.env
+.supabase/
+
+# ========================
+# Logs
+# ========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ========================
+# Cache & Temp Files
+# ========================
+.cache/
+.temp/
+.tmp/
+*.tmp
+.vite/
+.eslintcache
+*.tsbuildinfo
+
+# ========================
+# Editor & OS
+# ========================
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+desktop.ini
+
+# ========================
+# Testing
+# ========================
+coverage/
+.nyc_output/
+
+# ========================
+# Misc / Project Specific
+# ========================
+*.zip
+*.tar.gz
+mem/

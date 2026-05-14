@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hostiva.com - Modern Travel Design System */
+
+@layer base {
+  :root {
+    /* Light modern theme */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Hostiva brand — Navy primary (#1F3F7A) to match the logo wordmark */
+    --primary: 218 60% 30%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    /* Gold accent (#D4A24C) — matches the logo's gold roof mark */
+    --accent: 38 60% 56%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 218 60% 30%;
+
+    --radius: 0.75rem;
+
+    /* Coral-red used exclusively for rating stars, rating numbers, review
+       counts, and per-night price displays across guest, host and admin
+       modules. Matches Airbnb-style brand red (#FF385C). */
+    --rating: 351 100% 61%;
+    --rating-foreground: 0 0% 100%;
+
+    /* Brand aliases — kept under legacy names so existing utilities still
+       resolve, but now point at the Hostiva navy + gold so the entire UI
+       (chatbot, buttons, links, focus rings) matches the logo. */
+    --pink: 218 60% 30%;
+    --pink-light: 218 60% 94%;
+    --pink-dark: 218 60% 22%;
+    --coral: 12 76% 61%;
+    --teal: 173 58% 39%;
+    --gray-50: 210 20% 98%;
+    --gray-100: 220 14% 96%;
+    --gray-200: 220 13% 91%;
+    --gray-500: 220 9% 46%;
+    --gray-700: 215 19% 35%;
+    --gray-900: 222 47% 11%;
+
+    /* Editorial/Luxury palette */
+    --ink: 28 18% 12%;
+    --paper: 36 30% 97%;
+    --cream: 38 40% 94%;
+    --parchment: 38 32% 90%;
+    --gold: 38 55% 48%;
+    --gold-soft: 40 60% 88%;
+    --burgundy: 350 55% 32%;
+    --sage: 110 12% 38%;
+    --rule: 30 15% 80%;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 218 60% 30%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 218 60% 30%;
+  }
+
+  .dark {
+    --background: 222 47% 9%;
+    --foreground: 210 20% 98%;
+    --card: 222 40% 14%;
+    --card-foreground: 210 20% 98%;
+    --popover: 222 40% 14%;
+    --popover-foreground: 210 20% 98%;
+    /* Lift navy in dark mode for contrast against deep backgrounds */
+    --primary: 218 70% 62%;
+    --primary-foreground: 0 0% 100%;
+    /* Coral-red rating token (slightly lifted for dark mode) */
+    --rating: 351 100% 68%;
+    --rating-foreground: 0 0% 100%;
+    --secondary: 222 30% 22%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 222 30% 18%;
+    --muted-foreground: 215 20% 78%;
+    --accent: 38 70% 62%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 222 25% 32%;
+    --input: 222 30% 22%;
+    --ring: 218 70% 62%;
+
+    /* Brand aliases (dark) — navy lifted for legibility */
+    --pink: 218 70% 62%;
+    --pink-light: 218 50% 22%;
+    --pink-dark: 218 70% 70%;
+    --coral: 12 80% 68%;
+    --teal: 173 65% 52%;
+    --gray-50: 222 30% 18%;
+    --gray-100: 222 30% 22%;
+    --gray-200: 222 25% 32%;
+    --gray-500: 215 20% 78%;
+    --gray-700: 215 25% 88%;
+    --gray-900: 210 20% 98%;
+
+    /* Editorial/Luxury palette — dark mode overrides
+       so text-ink, bg-paper, etc. remain readable. */
+    --ink: 210 20% 98%;
+    --paper: 222 40% 14%;
+    --cream: 222 35% 18%;
+    --parchment: 222 30% 22%;
+    --gold: 38 70% 62%;
+    --gold-soft: 38 40% 22%;
+    --burgundy: 350 60% 60%;
+    --sage: 110 25% 65%;
+    --rule: 222 25% 32%;
+
+    /* Sidebar */
+    --sidebar-background: 222 40% 12%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-primary: 218 70% 62%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 30% 22%;
+    --sidebar-accent-foreground: 210 20% 98%;
+    --sidebar-border: 222 25% 32%;
+    --sidebar-ring: 218 70% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-lg
+           transition-all duration-200 hover:brightness-95 active:scale-[0.98]
+           shadow-md hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply border border-border text-foreground font-medium px-6 py-3 rounded-lg
+           transition-all duration-200 hover:bg-secondary hover:border-gray-300;
+  }
+
+  .card-hover {
+    @apply bg-card rounded-xl overflow-hidden transition-all duration-300
+           hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .glass-effect {
+    @apply bg-background/95 backdrop-blur-md border-b border-border;
+  }
+
+  .text-gradient-pink {
+    @apply bg-gradient-to-r from-primary to-coral bg-clip-text text-transparent;
+  }
+
+  .input-modern {
+    @apply bg-background border border-border rounded-full px-4 py-3
+           text-foreground placeholder:text-muted-foreground
+           focus:border-primary focus:ring-2 focus:ring-primary/20
+           transition-all duration-200;
+  }
+
+  .search-bar {
+    @apply bg-card rounded-full shadow-lg border border-border
+           flex items-center divide-x divide-border;
+  }
+
+  .category-chip {
+    @apply flex flex-col items-center gap-2 px-4 py-3 cursor-pointer
+           text-foreground/80 hover:text-foreground transition-colors
+           border-b-2 border-transparent hover:border-foreground/40
+           dark:text-foreground/85;
+  }
+
+  .category-chip.active {
+    @apply text-foreground border-foreground font-semibold;
+  }
+
+  /* ============================================================
+     Editorial / Magazine utilities — Airbnb-meets-magazine
+     ============================================================ */
+  .font-editorial {
+    font-family: 'Fraunces', 'Nunito Sans', Georgia, serif;
+    font-feature-settings: 'ss01', 'ss02';
+    letter-spacing: -0.015em;
+  }
+
+  .editorial-eyebrow {
+    @apply text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground;
+  }
+
+  .editorial-rule-gold {
+    background: linear-gradient(90deg, transparent, hsl(var(--gold) / 0.5), transparent);
+    height: 1px;
+    width: 100%;
+  }
+
+  .editorial-card {
+    @apply rounded-2xl border bg-card transition-all duration-300;
+    box-shadow:
+      0 1px 0 0 hsl(var(--border) / 0.6),
+      0 12px 40px -28px hsl(var(--ink) / 0.18);
+  }
+
+  .editorial-card:hover {
+    box-shadow:
+      0 1px 0 0 hsl(var(--border) / 0.6),
+      0 24px 60px -32px hsl(var(--ink) / 0.22);
+  }
+
+  .editorial-paper {
+    background:
+      radial-gradient(1200px 400px at 0% 0%, hsl(var(--gold-soft) / 0.5), transparent 60%),
+      radial-gradient(900px 360px at 100% 0%, hsl(var(--pink-light) / 0.55), transparent 60%),
+      hsl(var(--paper));
+  }
+
+  .editorial-hero {
+    background: linear-gradient(180deg, hsl(var(--cream)) 0%, hsl(var(--paper)) 100%);
+    border: 1px solid hsl(var(--rule));
+  }
+
+  .editorial-pill {
+    @apply inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[11px] font-medium;
+    border-color: hsl(var(--gold) / 0.4);
+    background: hsl(var(--gold-soft) / 0.4);
+    color: hsl(var(--ink));
+  }
+
+  .editorial-divider {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .editorial-divider::before,
+  .editorial-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: hsl(var(--rule));
+  }
+
+  .editorial-numeric {
+    font-family: 'Fraunces', Georgia, serif;
+    font-variant-numeric: tabular-nums lining-nums;
+    font-feature-settings: 'lnum', 'tnum';
+    letter-spacing: -0.025em;
+  }
+
+  .editorial-tab-list {
+    @apply inline-flex items-center gap-6 border-b;
+    border-color: hsl(var(--rule));
+  }
+  .editorial-tab {
+    @apply relative -mb-px pb-3 text-sm font-medium text-muted-foreground transition-colors;
+  }
+  .editorial-tab[data-state='active'] {
+    color: hsl(var(--ink));
+  }
+  .editorial-tab[data-state='active']::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background: hsl(var(--gold));
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from { 
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to { 
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+/* Print Styles */
+@media print {
+  header, footer, nav, .print\\:hidden {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+  }
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  * {
+    box-shadow: none !important;
+  }
+}
+
+/* Leaflet z-index containment — keep map below dialogs/popovers (z-100+) */
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom,
+.leaflet-control,
+.leaflet-tile-pane,
+.leaflet-overlay-pane,
+.leaflet-shadow-pane,
+.leaflet-marker-pane,
+.leaflet-tooltip-pane,
+.leaflet-popup-pane {
+  z-index: 1 !important;
+}
+.leaflet-container {
+  z-index: 0 !important;
+  isolation: isolate;
+}
+
+/* Radix popper (Select / Popover / DropdownMenu) must render ABOVE Dialog
+   content (which uses z-[101]). Without this override, Select dropdowns opened
+   inside a Dialog can render behind the dialog surface. */
+[data-radix-popper-content-wrapper] {
+  z-index: 200 !important;
+}
