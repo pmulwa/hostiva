@@ -1,3 +1,17 @@
+User-agent: *
+Allow: /
+
+# Block admin and private pages
+Disallow: /admin
+Disallow: /admin/
+Disallow: /host/dashboard
+Disallow: /bookings
+Disallow: /messages
+Disallow: /profile
+Disallow: /settings
+Disallow: /favorites
+Disallow: /suspended
+
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +24,5 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
-Allow: /
+# Sitemap
+Sitemap: https://www.host-iva.com/sitemap.xml
