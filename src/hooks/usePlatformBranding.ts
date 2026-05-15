@@ -9,8 +9,8 @@ export type PlatformBranding = {
 
 export const DEFAULT_BRANDING: PlatformBranding = {
   platform_name: 'Hostiva',
-  support_email: 'support@hostly.co.ke',
-  support_phone: '+1 872 221 7881',
+  support_email: 'support@host-iva.com',
+  support_phone: '+254792895225',
 };
 
 let cached: PlatformBranding | null = null;

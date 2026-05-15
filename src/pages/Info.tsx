@@ -141,7 +141,7 @@ const PAGES: Record<string, InfoPageData> = {
         type: 'callout',
         tone: 'info',
         title: 'Found a barrier?',
-        text: 'We\'re always improving. Email support@hostly.co.ke with feedback or specific issues — we typically respond within 5 business days.',
+        text: 'We\'re always improving. Email support@host-iva.com with feedback or specific issues — we typically respond within 5 business days.',
       },
     ],
     cta: { label: 'Open accessibility settings', to: '/settings' },
@@ -334,7 +334,7 @@ const PAGES: Record<string, InfoPageData> = {
         ],
       },
       { type: 'heading', text: 'Media inquiries' },
-      { type: 'paragraph', text: 'For press, partnerships, or interview requests, contact support@hostly.co.ke. We aim to respond within one business day.' },
+      { type: 'paragraph', text: 'For press, partnerships, or interview requests, contact support@host-iva.com. We aim to respond within one business day.' },
       { type: 'heading', text: 'Company facts' },
       {
         type: 'list',
@@ -383,7 +383,7 @@ const PAGES: Record<string, InfoPageData> = {
         type: 'callout',
         tone: 'info',
         title: 'Have a feature request?',
-        text: 'Post it in the Community Forum or email support@hostly.co.ke. The most-requested ideas get prioritized each quarter.',
+        text: 'Post it in the Community Forum or email support@host-iva.com. The most-requested ideas get prioritized each quarter.',
       },
     ],
   },
@@ -424,7 +424,7 @@ const PAGES: Record<string, InfoPageData> = {
         type: 'callout',
         tone: 'success',
         title: 'Don\'t see your role?',
-        text: 'Send your portfolio to support@hostly.co.ke with a short note. We hire generalists too.',
+        text: 'Send your portfolio to support@host-iva.com with a short note. We hire generalists too.',
       },
     ],
   },
@@ -448,7 +448,7 @@ const PAGES: Record<string, InfoPageData> = {
         ],
       },
       { type: 'heading', text: 'Investor relations' },
-      { type: 'paragraph', text: 'For inquiries about funding rounds, financial information, or partnership discussions, please contact support@hostly.co.ke. All material non-public information is shared under NDA.' },
+      { type: 'paragraph', text: 'For inquiries about funding rounds, financial information, or partnership discussions, please contact support@host-iva.com. All material non-public information is shared under NDA.' },
       {
         type: 'callout',
         tone: 'warn',
@@ -496,7 +496,7 @@ const PAGES: Record<string, InfoPageData> = {
           { q: 'When is my card charged?', a: 'Immediately at the time of booking. The full amount (accommodation + cleaning + service fee) is captured by Paystack.' },
           { q: 'Why is the price different on the calendar vs my booking?', a: 'Weekend nights (Friday, Saturday, Sunday) and host-set custom prices for specific dates can change the per-night rate. The total you see at checkout is final.' },
           { q: 'Can I change my booking dates?', a: 'You\'ll need to cancel and rebook. Refer to the cancellation policy for refund eligibility, then book the new dates.' },
-          { q: 'I never received my confirmation email — what now?', a: 'Check your spam folder, then visit My Bookings to confirm the booking is "confirmed". If still missing, contact support@hostly.co.ke.' },
+          { q: 'I never received my confirmation email — what now?', a: 'Check your spam folder, then visit My Bookings to confirm the booking is "confirmed". If still missing, contact support@host-iva.com.' },
           { q: 'Is my payment information stored on Hostiva?', a: 'No. All payment data is tokenized and stored only by Paystack (PCI-DSS compliant). Hostiva only stores the booking metadata.' },
         ],
       },
@@ -585,7 +585,7 @@ const PAGES: Record<string, InfoPageData> = {
           'Use a strong, unique password — at least 8 characters mixing letters, numbers, and symbols.',
           'Enable browser autofill warnings for suspicious sites.',
           'Sign out of shared devices from Settings → Security → Active sessions.',
-          'If you suspect unauthorized access, immediately change your password and contact support@hostly.co.ke.',
+          'If you suspect unauthorized access, immediately change your password and contact support@host-iva.com.',
         ],
       },
       { type: 'heading', text: 'Notifications & privacy' },
@@ -683,7 +683,7 @@ const PAGES: Record<string, InfoPageData> = {
           'Document the issue with photos or videos as soon as possible.',
           'Contact your host or guest first via the Messages tab — most issues resolve within hours.',
           'If you can\'t reach a resolution, open a Resolution Center request from your booking detail page.',
-          'For emergencies that affect health or safety, contact local emergency services first, then notify Hostiva at support@hostly.co.ke or +1 872 221 7881.',
+          'For emergencies that affect health or safety, contact local emergency services first, then notify Hostiva at support@host-iva.com or +254792895225.',
         ],
       },
       { type: 'heading', text: 'Reporting concerns' },
@@ -1744,10 +1744,10 @@ export default function Info() {
 
           <div className="pt-8 border-t border-border flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
             <span className="flex items-center gap-2">
-              <Mail className="w-4 h-4" /> support@hostly.co.ke
+              <Mail className="w-4 h-4" /> support@host-iva.com
             </span>
             <span className="flex items-center gap-2">
-              <Phone className="w-4 h-4" /> +1 872 221 7881
+              <Phone className="w-4 h-4" /> +254792895225
             </span>
             <span className="flex items-center gap-2">
               <Users className="w-4 h-4" /> Available 24/7

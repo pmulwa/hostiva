@@ -810,7 +810,7 @@ export default function AdminSettings() {
                       onChange={(e) => setBranding((p) => ({ ...p, support_email: e.target.value }))}
                       className="mt-1"
                       maxLength={120}
-                      placeholder="support@hostly.co.ke"
+                      placeholder="support@host-iva.com"
                     />
                   </div>
                   <div>
@@ -821,7 +821,7 @@ export default function AdminSettings() {
                       onChange={(e) => setBranding((p) => ({ ...p, support_phone: e.target.value }))}
                       className="mt-1"
                       maxLength={32}
-                      placeholder="+1 872 221 7881"
+                      placeholder="+254792895225"
                     />
                   </div>
                 </div>
